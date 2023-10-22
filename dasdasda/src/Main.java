@@ -27,11 +27,6 @@ public class Main {
             System.out.print("Número do candidato selecionado: ");
             int numeroCandidato = scanner.nextInt();
 
-            while (!scanner.hasNextInt()) {
-                System.out.println("O valor digitado não é um número inteiro. Por favor, digite um número inteiro.");
-                scanner.next();
-            }
-
             for (cand candidato : candidatos) {
                 if (candidato.getNumero() == numeroCandidato) {
                     candidato.atualizarVotos();
