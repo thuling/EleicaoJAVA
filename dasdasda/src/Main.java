@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Quantos candidatos serão cadastrados? ");
-        int qtdCand = scanner.nextInt();
+        System.out.print("Quantos candidatos se inscreverão? ");
+        int qtdCntd = scanner.nextInt();
 
-        cand[] candidatos = new cand[qtdCand];
+        cand[] candidatos = new cand[qtdCntd];
 
-        for (int i = 0; i < qtdCand; i++) {
+        for (int i = 0; i < qtdCntd; i++) {
             System.out.print("Número do candidato " + (i + 1) + ": ");
             int numero = scanner.nextInt();
 
@@ -20,11 +20,11 @@ public class Main {
             candidatos[i] = new cand(numero, nome);
         }
 
-        System.out.print("Quantos votos serão computados? ");
+        System.out.print("Qual será a quantidade de votos computados?? ");
         int qtdVotos = scanner.nextInt();
 
         for (int i = 0; i < qtdVotos; i++) {
-            System.out.print("Número do candidato escolhido: ");
+            System.out.print("Número do candidato selecionado: ");
             int numeroCandidato = scanner.nextInt();
 
             while (!scanner.hasNextInt()) {
@@ -39,7 +39,7 @@ public class Main {
             }
         }
 
-        System.out.println("\nResultado da eleição:");
+        System.out.println("\nResultado:");
         for (cand candidato : candidatos) {
             System.out.println(candidato.getNumero() + " - " + candidato.getNome() + " - " + candidato.getVotos());
         }
